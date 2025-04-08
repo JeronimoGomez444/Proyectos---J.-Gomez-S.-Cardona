@@ -1,0 +1,33 @@
+<ion-content class="login-background">
+  <div class="login-container">
+
+
+    <ion-card class="login-card">
+      <h2 class="login-title">REGISTRO</h2>
+      <ion-list>
+        <ion-item>
+          <ion-label class="indicaciones" position="floating">Usuario</ion-label>
+          <ion-input [(ngModel)]="username" class="indicaciones" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="indicaciones" position="floating">Correo</ion-label>
+          <ion-input [(ngModel)]="email" class="indicaciones" type="email"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label class="indicaciones" position="floating">Contraseña</ion-label>
+          <ion-input [(ngModel)]="password" class="indicaciones" type="password"></ion-input>
+        </ion-item>
+
+      </ion-list>
+
+      <p class="register-link">
+        ¿Ya tienes una cuenta? <a href="javascript:void(0)" (click)="irALogin($event)">Inicia sesion</a>
+      </p>
+
+      <ion-button expand="block" class="register-button" (click)="register()">REGISTRARSE</ion-button>
+
+    </ion-card>
+  </div>
+</ion-content>

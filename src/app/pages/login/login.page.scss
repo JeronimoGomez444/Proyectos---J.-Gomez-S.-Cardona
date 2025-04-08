@@ -1,0 +1,124 @@
+$neon-pink: #ff2a6d;
+$neon-blue: #05d9e8;
+$dark-black: #111;
+
+@keyframes neon-pulse {
+  0% { box-shadow: 0 0 5px $neon-pink; }
+  50% { box-shadow: 0 0 15px $neon-pink; }
+  100% { box-shadow: 0 0 5px $neon-pink; }
+}
+
+ion-content.login-background {
+  &.loading {
+    --background: transparent;
+  }
+
+  &:not(.loading) {
+    --background: linear-gradient(135deg, #000, #111);
+    --background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/884d4739-e1b4-4a0d-9915-e886ef4bf263/dcn1d41-dc000d1c-a3ee-41d1-bef9-1e71ffa358f5.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzg4NGQ0NzM5LWUxYjQtNGEwZC05OTE1LWU4ODZlZjRiZjI2M1wvZGNuMWQ0MS1kYzAwMGQxYy1hM2VlLTQxZDEtYmVmOS0xZTcxZmZhMzU4ZjUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.5ObuV9iHUFq2toLNz8UmCclp2FJZu-CGaXfxB3--caQ') no-repeat center center / cover;
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loading-container ion-img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.login-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 15% auto;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid $neon-blue;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba($neon-blue, 0.5);
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-card {
+  background: transparent;
+  box-shadow: none;
+}
+
+.login-title {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+ion-list {
+  background: transparent;
+}
+
+ion-item {
+  --background: transparent;
+  --border-color: $neon-blue;
+  --border-width: 0 0 1px 0;
+  --highlight-color-focused: $neon-pink;
+  margin-bottom: 15px;
+}
+
+.indicaciones {
+  &.ion-label {
+    color: $neon-blue;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  &.ion-input {
+    color: white;
+  }
+}
+
+.login-button {
+  --background: transparent;
+  --border-width: 1px;
+  --border-color: $neon-pink;
+  --color: $neon-pink;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: neon-pulse 2s infinite;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  
+  a {
+    color: $neon-blue;
+    text-decoration: none;
+  }
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .loading-container ion-img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}

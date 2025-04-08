@@ -1,0 +1,25 @@
+<ion-content class="login-background" [class.loading]="isLoading">
+  <div *ngIf="isLoading" class="loading-container">
+    <ion-img [src]="imagePath"></ion-img>
+  </div>
+
+  <div *ngIf="!isLoading" class="login-container">
+    <ion-card class="login-card">
+      <h2 class="login-title">INICIO DE SESIÓN</h2>
+      <ion-list>
+        <ion-item>
+          <ion-label class="indicaciones" position="floating">Correo</ion-label>
+          <ion-input class="indicaciones" type="text" [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label class="indicaciones" position="floating">Contraseña</ion-label>
+          <ion-input class="indicaciones" type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+      </ion-list>
+      <p class="register-link">
+        ¿No tienes una cuenta? <a href="javascript:void(0)" (click)="irARegister($event)">Crear Cuenta</a>
+      </p>
+      <ion-button expand="block" class="login-button" (click)="login()">INICIAR SESIÓN</ion-button>
+    </ion-card>
+  </div>
+</ion-content>

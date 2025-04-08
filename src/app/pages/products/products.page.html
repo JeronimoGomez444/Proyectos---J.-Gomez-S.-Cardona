@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Productos 📱</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cargarArticulos()">
+
+       <ion-icon name="apps"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="refrescarArticulos($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <div *ngIf="isLoading" class="ion-text-center ion-padding">
+    <ion-spinner></ion-spinner>
+    <p>Cargando artículos...</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="ion-text-center ion-padding">
+    <ion-text color="danger">{{errorMessage}}</ion-text>
+  </div>
+
+
+
+  <ion-list *ngIf="articulos.length > 0">
+    <ion-item *ngFor="let articulo of articulos">
+      <ion-thumbnail slot="start" *ngIf="articulo.imagen1">
+        <!-- <img src="https://img.freepik.com/vector-premium/smartphone-logo-comunicacion-electronica-vector-diseno-telefono-moderno-simbolo-marca-empresa_638875-2350.jpg" [alt]="articulo.nombre"> -->
+
+          <img [src]="articulo.imagen1" [alt]="articulo.nombre">
+
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{articulo.nombre}}</h2>
+        <p>{{articulo.descripcion}}</p>
+        <p><strong>Precio:</strong> ${{articulo.precio | number}}</p>
+        <p><strong>Ubicación:</strong> {{articulo.ubicacion}}</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+  <div *ngIf="articulos.length === 0 && !isLoading" class="ion-text-center ion-padding">
+    <ion-text color="medium">No hay artículos disponibles</ion-text>
+  </div>
+</ion-content>
