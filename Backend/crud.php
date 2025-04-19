@@ -22,7 +22,7 @@ class AuthService
                 throw new Exception("Código inválido");
             }
 
-            $sql = "DELETE FROM productos WHERE codigo = :codigo";
+            $sql = "DELETE FROM app WHERE codigo = :codigo";
             $stmt = $this->db->prepare($sql);
             $stmt->bindParam(':codigo', $codigo, PDO::PARAM_INT);
 
@@ -39,7 +39,7 @@ class AuthService
     public function obtenerTodos()
     {
         try {
-            $sql = "SELECT * FROM productos";
+            $sql = "SELECT * FROM app";
             $stmt = $this->db->prepare($sql);
             $stmt->execute();
             $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -52,7 +52,7 @@ class AuthService
     public function agregarArticulo($descripcion, $precio)
     {
         try {
-            $sql = "INSERT INTO productos (descripcion, precio) VALUES (:descripcion, :precio)";
+            $sql = "INSERT INTO app (descripcion, precio) VALUES (:descripcion, :precio)";
             $stmt = $this->db->prepare($sql);
             $stmt->bindParam(':descripcion', $descripcion);
             $stmt->bindParam(':precio', $precio);
@@ -70,7 +70,7 @@ class AuthService
     public function actualizarArticulo($codigo, $descripcion, $precio)
     {
         try {
-            $sql = "UPDATE productos SET descripcion = :descripcion, precio = :precio WHERE codigo = :codigo";
+            $sql = "UPDATE app SET descripcion = :descripcion, precio = :precio WHERE codigo = :codigo";
             $stmt = $this->db->prepare($sql);
             $stmt->bindParam(':descripcion', $descripcion);
             $stmt->bindParam(':precio', $precio);
@@ -89,7 +89,7 @@ class AuthService
     public function seleccionarArticulo($codigo)
     {
         try {
-            $sql = "SELECT * FROM productos WHERE codigo = :codigo";
+            $sql = "SELECT * FROM app WHERE codigo = :codigo";
             $stmt = $this->db->prepare($sql);
             $stmt->bindParam(':codigo', $codigo, PDO::PARAM_INT);
             $stmt->execute();
