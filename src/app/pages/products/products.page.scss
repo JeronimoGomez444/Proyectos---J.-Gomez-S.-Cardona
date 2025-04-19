@@ -1,56 +1,279 @@
-ion-toolbar {
-    --background: linear-gradient(135deg, #1e88e526 0%, #000000 100%);
-    --color: rgb(255, 255, 255); /* Color del texto blanco para mejor contraste */
-    --border-width: 0; /* Elimina el borde inferior si existe */
-  
-    /* Efecto de transparencia para el gradiente */
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-  
-  /* Estilo para el botón */
-  ion-button {
-    --color: white;
-    --background-hover: rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Estilo para el icono */
-  ion-icon {
-    font-size: 1.5em;
-  }
-  
-  
-  ion-content {
-    --background: linear-gradient(135deg, #1e88e526 0%, #000000 100%);
-  }
-  
-  ion-list {
-    background: transparent;
-    ion-item {
-      --background: rgba(255, 255, 255, 0.9);
-      margin-bottom: 12px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-  }
-  
-  /* Opcional: Mejora el estilo del texto para mejor contraste */
-  ion-label {
-    h2 {
-      color: #212121;
-      font-weight: 600;
-    }
-    p {
-      color: #424242;
-    }
-  }
-  
-  /* Estilo para el mensaje cuando no hay artículos */
-  ion-text {
-    color: white !important;
-  }
-  
-  /* Estilo para el spinner de carga */
-  ion-spinner {
-    color: white;
-  }
+ion-toolbar { 
+
+  --background: linear-gradient(135deg, #1e88e526 0%, #000000 100%); 
+
+  --color: rgb(255, 255, 255); /* Color del texto blanco para mejor contraste */ 
+
+  --border-width: 0; /* Elimina el borde inferior si existe */ 
+
+ 
+
+  /* Efecto de transparencia para el gradiente */ 
+
+  backdrop-filter: blur(8px); 
+
+  -webkit-backdrop-filter: blur(8px); 
+
+} 
+
+ 
+
+/* Estilo para el botón */ 
+
+ion-button { 
+
+  --color: white; 
+
+  --background-hover: rgba(255, 255, 255, 0.1); 
+
+} 
+
+ 
+
+/* Estilo para el icono */ 
+
+ion-icon { 
+
+  font-size: 1.5em; 
+
+} 
+
+ 
+
+ 
+
+ion-content { 
+
+  --background: linear-gradient(135deg, #1e88e526 0%, #000000 100%); 
+
+} 
+
+ 
+
+ion-list { 
+
+  background: transparent; 
+
+  ion-item { 
+
+    --background: rgba(255, 255, 255, 0.9); 
+
+    margin-bottom: 12px; 
+
+    border-radius: 8px; 
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+
+  } 
+
+} 
+
+ 
+
+/* Opcional: Mejora el estilo del texto para mejor contraste */ 
+
+ion-label { 
+
+  h2 { 
+
+    color: #212121; 
+
+    font-weight: 600; 
+
+  } 
+
+  p { 
+
+    color: #424242; 
+
+  } 
+
+} 
+
+ 
+
+/* Estilo para el mensaje cuando no hay artículos */ 
+
+ion-text { 
+
+  color: white !important; 
+
+} 
+
+ 
+
+/* Estilo para el spinner de carga */ 
+
+ion-spinner { 
+
+  color: white; 
+
+} 
+
+ 
+
+ 
+
+//  estilos para el infinite scroll 
+
+ 
+
+/* products.page.scss */ 
+
+ion-infinite-scroll { 
+
+  margin-bottom: 20px; 
+
+} 
+
+ 
+
+/* Estilo para cuando no hay más datos */ 
+
+ion-infinite-scroll[disabled] { 
+
+  display: none; 
+
+} 
+
+ 
+
+ion-toolbar { 
+
+  --background: linear-gradient(135deg, #1e88e526 0%, #000000 100%); 
+
+  --color: rgb(255, 255, 255); /* Color del texto blanco para mejor contraste */ 
+
+  --border-width: 0; /* Elimina el borde inferior si existe */ 
+
+ 
+
+  /* Efecto de transparencia para el gradiente */ 
+
+  backdrop-filter: blur(8px); 
+
+  -webkit-backdrop-filter: blur(8px); 
+
+} 
+
+ 
+
+/* Estilo para el botón */ 
+
+ion-button { 
+
+  --color: white; 
+
+  --background-hover: rgba(255, 255, 255, 0.1); 
+
+} 
+
+ 
+
+/* Estilo para el icono */ 
+
+ion-icon { 
+
+  font-size: 1.5em; 
+
+} 
+
+ 
+
+ 
+
+ion-content { 
+
+  --background: linear-gradient(135deg, #1e88e526 0%, #000000 100%); 
+
+} 
+
+ 
+
+ion-list { 
+
+  background: transparent; 
+
+  ion-item { 
+
+    --background: rgba(255, 255, 255, 0.9); 
+
+    margin-bottom: 12px; 
+
+    border-radius: 8px; 
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+
+  } 
+
+} 
+
+ 
+
+/* Opcional: Mejora el estilo del texto para mejor contraste */ 
+
+ion-label { 
+
+  h2 { 
+
+    color: #212121; 
+
+    font-weight: 600; 
+
+  } 
+
+  p { 
+
+    color: #424242; 
+
+  } 
+
+} 
+
+ 
+
+/* Estilo para el mensaje cuando no hay artículos */ 
+
+ion-text { 
+
+  color: white !important; 
+
+} 
+
+ 
+
+/* Estilo para el spinner de carga */ 
+
+ion-spinner { 
+
+  color: white; 
+
+} 
+
+ 
+
+ 
+
+//  estilos para el infinite scroll 
+
+ 
+
+/* products.page.scss */ 
+
+ion-infinite-scroll { 
+
+  margin-bottom: 20px; 
+
+} 
+
+ 
+
+/* Estilo para cuando no hay más datos */ 
+
+ion-infinite-scroll[disabled] { 
+
+  display: none; 
+
+} 
+
+ 

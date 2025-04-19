@@ -13,4 +13,4 @@ bootstrapApplication(AppComponent, {
     provideRouter(routes, withPreloading(PreloadAllModules)),
     provideHttpClient(),
   ],
-});
+}).catch(err => console.error(err));
